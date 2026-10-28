@@ -146,7 +146,7 @@ btnCalc.addEventListener('click', ()=>{
 clearBtn.addEventListener('click', ()=>{
     myInput.value = ""
     r3.checked = true
-    for(let i = 1; i < toppings.length; i++) {
+    for(let i = 0; i < toppings.length; i++) {
         toppings[i].checked = false
     }
     serviceSelect.value = 'dinein'
