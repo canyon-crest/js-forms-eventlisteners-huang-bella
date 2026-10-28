@@ -62,7 +62,7 @@ btnCalc.addEventListener('click', ()=>{
             num = num + 1
         }
     }
-    topPrice = num * 0.50
+    let topPrice = num * 0.50
     let fee = 0.00
     const service = document.getElementById('serviceSelect')
     if (service.value === "dinein") {
@@ -143,11 +143,12 @@ btnCalc.addEventListener('click', ()=>{
 //         c) Uncheck ALL topping checkboxes (loop through them)
 //         d) Set the service dropdown value to "dinein"
 //         e) Set the output paragraph innerHTML to ""
+const checkboxes = document.getElementsByName('cb');
 clearBtn.addEventListener('click', ()=>{
     myInput.value = ""
     r3.checked = true
-    for(let i = 0; i < toppings.length; i++) {
-        toppings[i].checked = false
+    for(let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false;
     }
     serviceSelect.value = 'dinein'
     myPara.innerHTML = ""
